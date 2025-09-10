@@ -1,0 +1,327 @@
+/* CSS Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+/* Grundlegende Grid-Struktur für den Wrapper */
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-column-gap: 5px;
+    grid-row-gap: 10px;
+    margin: 0 auto;
+}
+
+/* Header-Bereich */
+header {
+    grid-column: 1 / 7;
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    margin-top: 1rem;
+}
+
+/* Logo-Bereich */
+#logo {
+    text-align: left;
+    display: grid;
+    align-items: center;
+    justify-items: start;
+    padding-left: 1rem;
+    img {
+        width: 25%;
+    }
+}
+
+/* Auth-Bereich */
+#auth {
+    text-align: right;
+    display: grid;
+    align-items: center;
+    justify-items: end;
+    float: right;
+    padding-right: 1rem;
+    ul > li {
+        display: inline-block;
+    }
+    ul > li > a {
+        display: block;
+        width: 6rem;
+        text-align: center;
+        font-size: 0.8rem;
+        font-weight: bold;
+        text-decoration: none;
+        color: #0195f6;
+        padding: 8px 10px;
+        margin-left: 10px;
+        border-radius: 8px;
+    }
+    ul > li > a.active {
+        background-color: #0195f6;
+        color: #f6fbff;
+    }
+    ul > li > a:hover {
+        background-color: #0195f6;
+        text-decoration: underline;
+        color: #f6fbff;
+    }
+}
+
+hr {
+    grid-column: 1 / 7;
+    height: 1px;
+    border: none;
+    background-color: #ccc; /* oder jede andere Farbe deiner Wahl */
+}
+
+/* Main-Bereich */
+main {
+    grid-column: 1 / 7;
+    display: grid;
+    grid-template-rows: auto auto auto;
+}
+
+/* Hero-Sektion */
+#hero {
+    grid-column: 1 / 7;
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+/* Headline im Hero-Bereich */
+#headline {
+    text-align: center;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    h1 {
+        font-weight: bolder;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Submenu im Hero-Bereich */
+#submenu {
+    text-align: left;
+    display: grid;
+    justify-items: start;
+    align-items: center;
+    padding-left: 0.5rem;
+    margin-bottom: 1rem;
+    ul > li {
+        display: inline-block;
+    }
+    ul > li > a {
+        display: block;
+        text-align: center;
+        font-size: 0.8rem;
+        font-weight: bold;
+        text-decoration: none;
+        color: #000000;
+        padding: 8px 10px;
+        margin-left: 10px;
+        border-radius: 8px;
+        background-color: #ececec;
+    }
+}
+
+/* Kategorie 1 Sektion */
+#cat01 {
+    grid-column: 1 / 7;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto 3fr;
+    gap: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Music/Audio-Bereich */
+#music_audio {
+    grid-column: 1 / 7;
+    margin-bottom: 1rem;
+    h2 {
+        font-size: 1rem;
+        padding-left: 0.5rem;
+    }
+    h2:after {
+        content: " >";
+    }
+}
+
+.card {
+    position:relative;
+    height: 400px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    cursor: pointer;
+}
+.next-button {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(206, 206, 206, 0.363);
+    border-radius: 50%;
+    border: none;
+    color: white;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    padding: 0;
+    outline: none;
+}
+
+.next-button:hover {
+    background-color: rgb(110, 109, 109);
+}
+
+.unterschrift {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-weight:bold;
+    padding: 5px 5px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    z-index: 2;
+}
+
+/* Karten in Kategorie 1 */
+#card01 {
+    grid-column: 1 / 2;
+    background-image: url("../images/musik_audio/001.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+#card02 {
+    grid-column: 2 / 3;
+    background-image: url("../images/musik_audio/002.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+#card03 {
+    grid-column: 3 / 4;
+    background-image: url("../images/musik_audio/003.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+#card04 {
+    grid-column: 4 / 5;
+    background-image: url("../images/musik_audio/004.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+#card05 {
+    grid-column: 5 / 6;
+    background-image: url("../images/musik_audio/005.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+#card06 {
+    grid-column: 6 / 7;
+    background-image: url("../images/musik_audio/006.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* Kategorie 2 Sektion */
+#cat02 {
+    grid-column: 1 / 7;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto 3fr;
+    gap: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Sport-Bereich */
+#sport {
+    grid-column: 1 / 7;
+    margin-bottom: 1rem;
+    h2 {
+        font-size: 1rem;
+        padding-left: 0.5rem;
+    }
+    h2:after {
+        content: " >";
+    }
+}
+
+/* Karten in Kategorie 2 */
+#card11 {
+    grid-column: 1 / 2;
+    background-image: url("../images/sport/001.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+#card12 {
+    grid-column: 2 / 3;
+    background-image: url("../images/sport/002.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+#card13 {
+    grid-column: 3 / 4;
+    background-image: url("../images/sport/003.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+#card14 {
+    grid-column: 4 / 5;
+    background-image: url("../images/sport/004.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+#card15 {
+    grid-column: 5 / 6;
+    background-image: url("../images/sport/005.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+#card16 {
+    grid-column: 6 / 7;
+    background-image: url("../images/sport/006.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
